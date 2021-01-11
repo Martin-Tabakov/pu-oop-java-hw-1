@@ -1,15 +1,26 @@
 package pawns;
 
-import board.Nation;
+import enums.*;
 
 import java.awt.*;
 
 public class Guard extends Pawn {
-
+    /**
+     * Constructor for a Guard object
+     *
+     * @param xPos   Horizontal position on the gameBoard
+     * @param yPos   Vertical position on the gameBoard
+     * @param nation The nation, to which the current instance belongs to
+     */
     public Guard(int xPos, int yPos, Nation nation) {
         super(xPos, yPos, nation);
     }
 
+    /**
+     * Method for visualising the Guard on the gameBoard
+     *
+     * @param g Graphics base class
+     */
     @Override
     public void render(Graphics g) {
         int sizeDiff = 5;

@@ -1,4 +1,4 @@
-package board;
+package enums;
 
 import java.awt.*;
 
@@ -12,6 +12,11 @@ public enum Colors {
 
     public Color color;
 
+    /**
+     * Constructor, used for setting all enum values
+     *
+     * @param c Color class instance
+     */
     Colors(Color c) {
         this.color = c;
     }

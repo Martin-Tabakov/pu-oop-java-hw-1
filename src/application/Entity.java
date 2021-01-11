@@ -15,6 +15,12 @@ public abstract class Entity {
     protected Color fillColor;
     protected Color borderColor;
 
+    /**
+     * Constructor for a base class, used to initialise positions.
+     *
+     * @param xPos Horizontal position on the gameBoard
+     * @param yPos Vertical position on the gameBoard
+     */
     protected Entity(int xPos, int yPos) {
         this.xPos = xPos;
         this.yPos = yPos;
