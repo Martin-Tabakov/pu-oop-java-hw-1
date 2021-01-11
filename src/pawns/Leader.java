@@ -9,6 +9,7 @@ public class Leader extends Pawn {
         super(xPos, yPos, nation);
     }
 
+    @Override
     public void render(Graphics g) {
         g.setColor(fillColor);
         g.fillRect(coordX + inTileOffset, coordY + inTileOffset, pawnSize, pawnSize);

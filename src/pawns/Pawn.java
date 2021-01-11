@@ -3,6 +3,8 @@ package pawns;
 import application.Entity;
 import board.Nation;
 
+import java.awt.*;
+
 public class Pawn extends Entity {
 
     protected final int sizeScale = 2;
@@ -16,5 +18,8 @@ public class Pawn extends Entity {
         this.fillColor = nation.fillColor;
         this.inTileOffset = offset/offsetScale;
         this.pawnSize = entitySize/sizeScale;
+    }
+    public void render(Graphics g){
+
     }
 }

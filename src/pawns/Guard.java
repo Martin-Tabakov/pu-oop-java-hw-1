@@ -10,6 +10,7 @@ public class Guard extends Pawn {
         super(xPos, yPos, nation);
     }
 
+    @Override
     public void render(Graphics g) {
         int sizeDiff = 5;
         g.setColor(borderColor);

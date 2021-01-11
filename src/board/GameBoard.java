@@ -1,5 +1,7 @@
 package board;
 
+import pawns.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -23,6 +25,31 @@ public class GameBoard extends JFrame {
         for (BoardTile tile : tiles) {
             tile.render(g);
         }
+        ArrayList<Pawn> yellowSide = setYellowSide();
+        ArrayList<Pawn> greenSide = setGreenSide();
+        for(int i=0;i<5;i++){
+            yellowSide.get(i).render(g);
+            greenSide.get(i).render(g);
+        }
+    }
+
+    private ArrayList<Pawn> setYellowSide(){
+        ArrayList<Pawn> pawns = new ArrayList<>();
+        pawns.add(new Guard(0,0,Nation.YELLOW));
+        pawns.add(new Guard(1,0,Nation.YELLOW));
+        pawns.add(new Guard(2,0,Nation.YELLOW));
+        pawns.add(new Guard(3,0,Nation.YELLOW));
+        pawns.add(new Leader(4,0,Nation.YELLOW));
+        return pawns;
+    }
+    private ArrayList<Pawn> setGreenSide(){
+        ArrayList<Pawn> pawns = new ArrayList<>();
+        pawns.add(new Guard(4,4,Nation.GREEN));
+        pawns.add(new Guard(3,4,Nation.GREEN));
+        pawns.add(new Guard(2,4,Nation.GREEN));
+        pawns.add(new Guard(1,4,Nation.GREEN));
+        pawns.add(new Leader(0,4,Nation.GREEN));
+        return pawns;
     }
 
     private ArrayList<BoardTile> setTiles() {
