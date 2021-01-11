@@ -16,11 +16,11 @@ public class CenterTile extends BoardTile {
     @Override
     public void render(Graphics g) {
         super.render(g);
-        int ovalSize = this.tileSize / 4;
+        int ovalSize = entitySize / 4;
         g.setColor(circleBorder);
-        g.fillOval(this.coordX + ovalSize - 1, this.coordY + ovalSize - 1, ovalSize * 2 + 2, ovalSize * 2 + 2);
+        g.fillOval(coordX + ovalSize - 1, coordY + ovalSize - 1, ovalSize * 2 + 2, ovalSize * 2 + 2);
         g.setColor(circleFill);
-        g.fillOval(this.coordX + ovalSize, this.coordY + ovalSize, ovalSize * 2, ovalSize * 2);
+        g.fillOval(coordX + ovalSize, coordY + ovalSize, ovalSize * 2, ovalSize * 2);
     }
 
 }
